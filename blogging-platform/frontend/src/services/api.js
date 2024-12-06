@@ -1,8 +1,7 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "http://localhost:5000/api" });
+const api = axios.create({
+  baseURL: "http://localhost:5000/api", // Adjust based on your backend
+});
 
-export const loginUser = (credentials) => API.post("/users/login", credentials);
-export const registerUser = (data) => API.post("/users/register", data);
-export const fetchPosts = () => API.get("/posts");
-export const createPost = (postData) => API.post("/posts", postData);
+export default api;
